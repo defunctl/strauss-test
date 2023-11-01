@@ -36,11 +36,12 @@
   },
   "extra": {
     "strauss": {
-      "target_directory": "vendor/vendor-prefixed",
+      "target_directory": "vendor-prefixed",
       "namespace_prefix": "Strauss\\Prefix",
       "classmap_prefix": "Strauss__Prefix__",
       "constant_prefix": "STRAUSS_PREFIX_",
       "packages": [
+        "ralouphie/getallheaders",
         "guzzlehttp/psr7",
         "lucatume/di52",
         "psr/container"
@@ -48,7 +49,7 @@
       "exclude_from_prefix": {
         "file_patterns": []
       },
-      "delete_vendor_files": true,
+      "delete_vendor_packages": true,
       "include_modified_date": false,
       "include_author": false
     }
