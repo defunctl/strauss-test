@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Strauss\\Tests\\Unit\\ContainerTest::test_it_runs_hello":7},"times":{"Strauss\\Tests\\Unit\\ContainerTest::test_it_finds_the_container":0.001,"Strauss\\Tests\\Unit\\ContainerTest::test_it_runs_hello":0}}

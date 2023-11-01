@@ -1,0 +1,56 @@
+{
+  "name": "strauss/test",
+  "autoload": {
+    "psr-4": {
+      "Strauss\\": "./src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Strauss\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "lucatume/di52": "^3.3",
+    "guzzlehttp/psr7": "^2.6"
+  },
+  "require-dev": {
+    "brianhenryie/strauss": "dev-master",
+    "phpunit/phpunit": "^10.4"
+  },
+  "scripts": {
+    "test": "@php vendor/bin/phpunit -c phpunit.xml.dist --colors=always -d memory_limit=2G",
+    "strauss": [
+      "vendor/bin/strauss"
+    ],
+    "post-install-cmd": [
+      "@strauss"
+    ],
+    "post-update-cmd": [
+      "@strauss"
+    ]
+  },
+  "extra": {
+    "strauss": {
+      "target_directory": "vendor/vendor-prefixed",
+      "namespace_prefix": "Strauss\\Prefix",
+      "classmap_prefix": "Strauss__Prefix__",
+      "constant_prefix": "STRAUSS_PREFIX_",
+      "packages": [
+        "guzzlehttp/psr7",
+        "lucatume/di52",
+        "psr/container"
+      ],
+      "exclude_from_prefix": {
+        "file_patterns": []
+      },
+      "delete_vendor_files": true,
+      "include_modified_date": false,
+      "include_author": false
+    }
+  }
+}
